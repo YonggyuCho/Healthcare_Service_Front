@@ -38,7 +38,7 @@ get_kustomization:
     - main
   before_script:
     - git config --global user.name "gitlab runner"
-    - git config --global user.email "bangwol08@gmail.com"
+    - git config --global user.email ""
   script:
     - git clone -b main --single-branch https://$GITLAB_ID:$GITLAB_TOKEN@gitlab.ddoksik2.site/bangwol08/healthcare_deploy.git
   artifacts:
@@ -68,7 +68,7 @@ push_kustomization:
   before_script:
     - cd healthcare_deploy
     - git config --global user.name "gitlab runner"
-    - git config --global user.email "bangwol08@gmail.com"
+    - git config --global user.email ""
     - git branch -M UI_staging
   script:
     - git add kustomization.yaml
